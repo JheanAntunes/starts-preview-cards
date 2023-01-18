@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import "variaveis-fontes.scss";
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: $Very-dark-blue-main-background;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    width: 350px;
+    background-color: $Dark-desaturated-blue-card-background;
+    display: flex;
+    flex-direction: column;
+    margin: 1.8rem 0rem;
+    overflow: hidden;
+    border-radius: $border-radius;
+}
+
+section.imagem{
+ position: relative;
+ border-radius: $border-radius;
+    //config imagem padrão
+    img{
+        width: 100%;
+        height: 100%;
+    }//fim da config img
+
+    //before para cor de fundo
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: $Soft-violet-accent;
+        width: 100%;
+        height: 100%;
+        opacity: 60%;
+        filter: contrast(120%);
+    }//fim do before
+} // fim da section
+
+section.texto{
+    width: 100%;
+    text-align: center;
+
+    h2{// h2
+        color: $White-main-heading-stats;        
+         font-family: $fonte-inter-400-700;
+        font-weight: $fonte-weight-700;  
+        padding-top: 1.5rem;
+        span{ // span
+            color: $Soft-violet-accent;
+        }//end span
+    }//end h2
+
+    p{//p
+        color: $Slightly-transparent-white-main-paragraph;
+        font-family: $fonte-inter-400-700;
+        font-weight: $fonte-weight-400;
+        font-size: .8rem;
+        padding:1rem;
+    }//end p
+
+    div.companies{ //div companies
+
+        h2{
+            font-family: $fonte-lexend-400;
+            font-weight: $fonte-weight-400;
+        }
+       
+        span{//span
+            text-transform: uppercase;
+            color: $Slightly-transparent-white-stat-headings;
+            font-family: $fonte-lexend-400;
+            font-weight: $fonte-weight-400;
+            font-size: 12px;
+        }// span end
+    }//end div companies
+
+    div.template{ //div template
+             
+        h2{
+            font-family: $fonte-lexend-400;
+            font-weight: $fonte-weight-400;
+        }
+       
+        span{//span
+            text-transform: uppercase;
+            color: $Slightly-transparent-white-stat-headings;
+            font-family: $fonte-lexend-400;
+            font-weight: $fonte-weight-400;
+            font-size: 12px;
+        }// span end
+    }//end div template
+
+    div.queries{ //div queries
+          padding-bottom: 1rem;   
+        h2{
+            font-family: $fonte-lexend-400;
+            font-weight: $fonte-weight-400;
+        }
+       
+        span{//span
+            text-transform: uppercase;
+            color: $Slightly-transparent-white-stat-headings;
+            font-family: $fonte-lexend-400;
+            font-weight: $fonte-weight-400;
+            font-size: 12px;
+        }// span end
+    }//end div queries
+
+}//end section.texto
+
+
+/*media queries*/
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+
+    main{
+        flex-direction: row-reverse;
+        width: 900px;
+        height: 400px;
+    }
+
+    section.imagem{//seciont
+        width: 50%;
+    }//fim
+
+    section.texto{//section
+        width: 50%;
+        padding: 0.7rem 2rem;
+        text-align: left;
+        p{
+            padding: 3rem 0rem;
+            font-size: 1rem;
+        }
+        div.media-query-flex-row{//div
+         padding-top: 2.4rem;
+         display: flex;
+        justify-content: space-between;
+        }//fim-div
+    }//fim section texto
+   
+
+}//fim media query
+
+/* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+
+    main{
+        flex-direction: row-reverse;
+        width: 900px;
+        height: 400px;
+    }
+
+    section.imagem{//seciont
+        width: 50%;
+    }//fim
+
+    section.texto{//section
+        width: 50%;
+        padding: 0.7rem 2rem;
+        text-align: left;
+        p{
+            padding: 3rem 0rem;
+            font-size: 1rem;
+        }
+        div.media-query-flex-row{//div
+         padding-top: 2.5rem;
+         display: flex;
+        justify-content: space-between;
+        }//fim-div
+    }//fim section texto
+ }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
